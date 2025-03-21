@@ -1,0 +1,123 @@
+/* Styles de base pour la page de résultats */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+main {
+    margin: 20px;
+}
+
+/* Partie recherche */
+.search-result {
+    display: flex;
+    align-items: center;  /* Aligne verticalement les éléments au centre */
+    justify-content: space-between;  /* Espace entre les éléments */
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+  }
+  
+  .search-result h1 {
+    margin: 0;  /* Enlève la marge par défaut du h1 */
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;  /* Aligne le champ de texte et le bouton sur la même ligne */
+    margin-top: 0px;  
+}
+  
+  .search-bar input {
+    padding: 8px;
+    margin-right: 10px;  /* Espace entre l'input et le bouton */
+  }
+  
+  .search-bar button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .search-bar img {
+    width: 20px;  /* Ajuste la taille de l'icône */
+    height: auto;
+  }
+
+/* Partie des résultats */
+.result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-item {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    align-items: flex-start; /* Assure que le contenu est aligné en haut */
+}
+
+.result-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.result-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: left; /* Aligne le titre à gauche */
+}
+
+.result-description {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+    text-align: left; /* Aligne la description à gauche */
+}
+
+/* Aligne l'auteur, la date et le logo sur la même ligne */
+.metadata {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments sur la même ligne */
+    justify-content: flex-start; /* Aligne les éléments à gauche */
+    align-items: flex-start;
+    font-size: 0.9rem;
+    color: #777;
+    width: 100%; /* Prend toute la largeur disponible */
+    gap: 15px; /* Espacement entre l'auteur, la date et le logo */
+}
+
+/* Ces classes doivent aussi se comporter correctement avec flexbox */
+.result-author,
+.result-date,
+.result-logo {
+    margin: 0;
+    display: inline-block; /* Permet de forcer un comportement en ligne */
+}
+
+
+.result-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Ajout d'un léger effet de survol pour les éléments de résultats */
+.result-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}

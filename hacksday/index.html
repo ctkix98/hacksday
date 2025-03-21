@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notre Histoire</title>
+</head>
+<body>
+    <div id="header"></div> <!-- Conteneur pour le header -->
+
+    <main>
+        <h1>L'Histoire Partagée</h1>
+        <h2>Explorer, participer, publier</h2>
+        <div class="search-bar">
+            <input type="text" placeholder="Description, titre" />
+            <button type="submit">
+                <img src="/src/img/loupe.png" alt="Rechercher" />
+            </button>
+        </div>
+    </main>
+
+    <script>
+        fetch("/src/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+    <script type="module" src="/src/index.js"></script>
+</body>
+</html>

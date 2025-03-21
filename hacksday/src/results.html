@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/result.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Résultats de la Recherche</title>
+  </head>
+  <body>
+    <div id="header"></div>
+    <!-- Conteneur pour le header -->
+
+    <main>
+      <!-- Partie recherche -->
+      <div class="search-result">
+        <h1>Résultats de votre recherche</h1>
+        <div class="search-bar">
+          <input type="text" placeholder="Mot clé, thème, lieu" />
+          <button type="submit">
+            <img src="/src/img/loupe.png" alt="Rechercher" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Partie résultats -->
+      <div class="result-list">
+        <!-- Exemple d'un résultat -->
+        <div class="result-item">
+          <div class="result-image">
+            <img src="/src/img/exemple.jpg" alt="Exemple Image" />
+          </div>
+          <div class="result-content">
+            <h3 class="result-title">Titre du résultat</h3>
+            <p class="result-description">
+              Voici une description succincte du résultat trouvé. Cela peut être
+              une explication ou un résumé de l'article ou de la page
+              recherchée.
+            </p>
+            <div class="metadata">
+              <p class="result-author">Jean Dupont</p>
+              <p class="result-date">21 Mars 2025</p>
+              <div class="result-logo">
+                <img src="/src/img/loggo.png" alt="Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          fetch("/src/header.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("header").innerHTML = data;
+            });
+        </script>
+
+        <!-- Ajouter ici d'autres résultats si nécessaire -->
+      </div>
+    </main>
+  </body>
+</html>
